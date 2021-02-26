@@ -1,0 +1,184 @@
+/* Basics and Utilities*/
+:root {
+    --bg-color: rgb(241, 43, 165);
+}
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+.container {
+    max-width: 90%;
+    width: 750px;
+    margin: 50px auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.btn {
+    border: 0;
+    padding: 10px 20px;
+    background: #555;
+    color: #fff;
+    display: inline-block;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.flx-dir {
+    width: 400px;
+    flex-direction: column;
+    margin: auto;
+}
+
+a.current {
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+a.active  {
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Nav */
+nav.nav {
+    justify-content: space-between;
+    padding:30px  40px;
+    background: var(--bg-color);
+    color: #fff;
+}
+
+nav.nav h1 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.nav li {
+    width: 60px;
+    color: rgb(231, 230, 230);
+}
+
+/* Text */
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--bg-color);
+}
+
+.text h1 sup {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.text p {
+    font-size: 2rem;
+}
+
+/* Content */
+
+.content .left h1{
+    font-size: 1.3rem;
+    margin: 15px;
+}
+
+.content .left li {
+    padding: 20px 10px;
+    background: var(--bg-color);
+    border-top: 4px solid #fff;
+    border-radius: 20px;
+    width: 300px;
+    color: rgb(216, 214, 214);
+    text-align: center;
+    transition: .25s;
+}
+
+.content .left li:hover {
+    opacity: 0.8;
+}
+
+.content section {
+    border: 1px solid var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.details h1 {
+    margin-bottom:20px;
+    text-transform: capitalize;
+}
+
+/* Media Queries */
+@media(max-width: 500px){
+    nav {
+        width: 100%;
+    }
+    
+    .text h1 {
+        font-size: 2rem;
+    }
+
+    .text h1 sup {
+        font-size: 1.5rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details h1 {
+        margin-top: 20px ;
+        width: 100%;
+    }
+
+    .content {
+        width: 340px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        width: 300px;
+        margin: 20px;
+    }
+}
+
